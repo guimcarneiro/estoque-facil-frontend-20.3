@@ -1,0 +1,26 @@
+.public-template__header {
+    height: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.public-template__header h3 {
+    margin: 16px;
+}
+
+.public-template__header__content {
+    width: 60%;
+}
+
+.public-template__header__content ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.public-template__header__links {
+    width: 50%;
+}

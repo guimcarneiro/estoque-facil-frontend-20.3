@@ -1,0 +1,17 @@
+.normal-page__root {
+    margin-top: 24px;
+    height: calc(100% - 30px);
+}
+
+.normal-page__root header {
+    height: 30px;
+
+    text-align: left;
+}
+
+/* 100% - height do header */
+.normal-page__root main {
+    height: calc(100% - 30px);
+
+    text-align: center;
+}
