@@ -1,0 +1,8 @@
+.products-list__content {
+    display: flex;
+    justify-content: center;
+}
+
+.products-list__content table {
+    width: 90%;
+}

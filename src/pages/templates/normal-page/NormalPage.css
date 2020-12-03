@@ -10,8 +10,10 @@
 }
 
 /* 100% - height do header */
-.normal-page__root main {
-    height: calc(100% - 30px);
+.normal-page__root > main {
+    height: calc(100% - 30px - 16px);
+
+    margin-top: 16px;
 
     text-align: center;
 }

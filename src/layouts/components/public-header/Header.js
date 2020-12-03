@@ -1,5 +1,9 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { UserToolbar } from '../../../components';
+
+import { APPLICATION_PATHS } from '../../../utils';
 
 import './Header.css';
 
@@ -7,26 +11,13 @@ const Header = (props) => {
 
     const { title } = props;
 
-    const links = [
-        {
-            title: "Home",
-            url: "/",
-        },
-        {
-            title: "Login",
-            url: "/login",
-        },
-        {
-            title: "Produtos",
-            url: "/products",
-        },
-    ]
+    const history = useHistory();
 
     const listOfLinks = () => {
         return (
             <ul>
                 {
-                    links.map(link => <li><Link to={ link.url }>{ link.title }</Link></li>)
+                    APPLICATION_PATHS.map(path => <li key={ path.title }><Link to={ path.url }>{ path.title }</Link></li>)
                 }
             </ul>
         )
@@ -40,7 +31,7 @@ const Header = (props) => {
                     { listOfLinks() }
                 </div>
                 <div className="public-template__header__login">
-
+                    <UserToolbar onClick={ () => history.push('/login') } />
                 </div>
             </div>
         </header>

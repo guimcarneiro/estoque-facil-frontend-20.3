@@ -2,13 +2,14 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import { PublicTemplate } from '../layouts';
-import { Home, ProductsList } from '../pages';
+import { Home, ProductsList, Login } from '../pages';
 
 const PublicRoutes = () => {
     return (
         <PublicTemplate>
             <Route exact path="/" render={ () => <Home /> } />
             <Route exact path="/products" render={ () => <ProductsList /> } />
+            <Route exact path="/login" render={ () => <Login /> } />
         </PublicTemplate>
     );
 }

@@ -5,7 +5,7 @@
 /* 100vh - height do header */
 .public-template__content {
     height: calc(100vh - 100px);
-    width: calc(100vw - 32px);
+    width: 1024px;/*calc(100vw - 32px);*/
 
     margin: 0 auto;
 }
