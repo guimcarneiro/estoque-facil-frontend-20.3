@@ -1,8 +1,16 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import './Login.css';
 
 const LoginForm = () => {
+
+    const history = useHistory();
+
+    const redirectToSignUp = () => {
+        history.push('/signup');
+    }
+
     return (
         <div className="login-form__root" >
             <form>
@@ -16,7 +24,8 @@ const LoginForm = () => {
                         <input type="password" />
                     </div>
                 </div>
-                <div className="login-form__submit-btn-container">
+                <div className="login-form__btns-container">
+                    <button onClick={redirectToSignUp}>Cadastre-se</button>
                     <button type="submit">Entrar</button>
                 </div>
             </form>
